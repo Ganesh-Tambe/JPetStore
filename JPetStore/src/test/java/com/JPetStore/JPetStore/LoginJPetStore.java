@@ -37,7 +37,7 @@ public class LoginJPetStore {
 	@Test
 	public void  logout()
 	{
-		driver.findElement(By.linkText("Sign Out")).click();
+		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 	
