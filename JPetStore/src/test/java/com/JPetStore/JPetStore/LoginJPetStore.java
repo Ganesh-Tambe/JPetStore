@@ -41,8 +41,8 @@ public class LoginJPetStore {
 	@Test
 	public void  logout() throws InterruptedException
 	{
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//a[text()='Sign Out']")))).click();
+		//Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Sign Out']"))).click();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 	
