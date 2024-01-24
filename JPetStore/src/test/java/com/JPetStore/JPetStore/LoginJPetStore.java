@@ -18,6 +18,7 @@ public class LoginJPetStore {
 	 driver=new ChromeDriver();
 	  driver.get("https://petstore.octoperf.com/actions/Catalog.action");
  }
+ //Login Functionality
 	@Test
   public void login() {
 	 driver.findElement(By.xpath("//a[text()='Sign In']")).click();
@@ -29,6 +30,7 @@ public class LoginJPetStore {
 	 Assert.assertEquals(text.getText(), "Welcome ABC!") ;
 	 
   }
+	//Logout Functionality
 	@Test
 	public void  logout()
 	{
