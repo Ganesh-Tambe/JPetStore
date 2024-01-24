@@ -1,5 +1,7 @@
 package com.JPetStore.JPetStore;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +19,7 @@ public class LoginJPetStore {
  {
 	 driver=new ChromeDriver();
 	  driver.get("https://petstore.octoperf.com/actions/Catalog.action");
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
  }
  //Login Functionality
 	@Test
