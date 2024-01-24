@@ -39,8 +39,9 @@ public class LoginJPetStore {
   }
 	//Logout Functionality
 	@Test
-	public void  logout()
+	public void  logout() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//a[text()='Sign Out']")))).click();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Catalog.action");
 	}
@@ -48,6 +49,6 @@ public class LoginJPetStore {
 	@AfterTest
 	public void after()
 	{
-		driver.close();
+		//driver.close();
 	}
 }
